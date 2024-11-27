@@ -15,7 +15,7 @@ h1 {
   text-align: center;
   margin-bottom: 1em; }
 
-.tarjetaCris {
+.tarjetaCristian {
   width: 300px;
   height: 200px;
   border-radius: 10px;
@@ -28,7 +28,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
   border: 2px solid #ff6666; }
-  .tarjetaCris:hover {
+  .tarjetaCristian:hover {
     transform: scale(1.05); }
 
 .tarjetaJohn {

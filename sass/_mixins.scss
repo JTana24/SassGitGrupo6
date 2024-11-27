@@ -15,4 +15,8 @@
       transform: scale(1.05);
     }
   }
+  @mixin giro($duration) {
+    -webkit-animation: giro $duration 1;
+    animation: giro $duration 1;
+  }
   

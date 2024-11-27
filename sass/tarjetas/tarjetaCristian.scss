@@ -1,0 +1,167 @@
+@import '../variables';
+@import '../mixins';
+
+%card-link {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    background: #fff;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+  }
+}
+
+.tarjetaCristian {
+  body {
+    color: #333;
+    font-family: Arial, Helvetica, serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    background: url(https://josetxu.com/img/fondo_blanco.png) repeat 0 0 #fff;
+  }
+
+  h1 {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 5% 0;
+    padding: 0.5em;
+  }
+
+  .tarjetaCristianCaja {
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+    
+    &:hover {
+      .contenido {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &:nth-child(1) .contenido .parteAtras {
+      background: cornflowerblue;
+    }
+
+    &:nth-child(2) .contenido .parteAtras {
+      background: orange;
+    }
+
+    &:nth-child(3) .contenido .parteAtras {
+      background: yellowgreen;
+    }
+
+    &:nth-child(4) .contenido .parteAtras {
+      background: tomato;
+    }
+
+    &:nth-child(2) .contenido {
+      @include giro(1.5s);
+    }
+
+    &:nth-child(3) .contenido {
+      @include giro(2s);
+    }
+
+    &:nth-child(4) .contenido {
+      @include giro(2.5s);
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-left: 2.8%;
+      margin-top: 3%;
+      width: 46%;
+
+      .contenido {
+        height: 285px;
+      }
+
+      &:last-child {
+        margin-bottom: 3%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 94.5%;
+
+      .contenido {
+        height: 260px;
+      }
+    }
+  }
+
+  .contenido {
+    background: #222;
+    cursor: default;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    @include giro(1s); 
+
+    p {
+      margin-bottom: 1.8em;
+    }
+
+    .parteFrontal, .parteAtras {
+      backface-visibility: hidden;
+      box-sizing: border-box;
+      color: white;
+      display: block;
+      font-size: 1.2em;
+      height: 100%;
+      padding: 0.8em;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+
+    .parteFrontal {
+      strong {
+        background: #fff;
+        border-radius: 100%;
+        color: #222;
+        font-size: 1.5em;
+        line-height: 30px;
+        padding: 0 7px 4px 6px;
+      }
+    }
+
+    .parteAtras {
+      transform: rotateY(180deg);
+      @extend %card-link; // Usando el extend para reutilizar estilos del enlace
+
+      a {
+        @extend %card-link; // Usando el extend también para el enlace
+      }
+    }
+  }
+
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateY(0deg);
+    }
+  }
+
+  @keyframes giro {
+    from {
+      transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateY(0deg);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import '../variables';
+@import '../mixins';
+
+.tarjetaCris {
+  @include tarjetaBase(#ffcccc, #333);
+  border: 2px solid #ff6666;
+}

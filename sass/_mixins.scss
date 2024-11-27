@@ -1,0 +1,18 @@
+@mixin tarjetaBase($background, $color) {
+    width: $card-width;
+    height: $card-height;
+    border-radius: $card-border-radius;
+    background-color: $background;
+    color: $color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  

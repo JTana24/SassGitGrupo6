@@ -1,0 +1,66 @@
+body {
+  font-family: "Arial, Helvetica, sans-serif";
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-wrap: wrap; }
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1em; }
+
+.tarjetaCris {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #ffcccc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial, Helvetica, sans-serif";
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 2px solid #ff6666; }
+  .tarjetaCris:hover {
+    transform: scale(1.05); }
+
+.tarjetaJohn {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #ccffcc;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial, Helvetica, sans-serif";
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 2px dashed #66cc66; }
+  .tarjetaJohn:hover {
+    transform: scale(1.05); }
+
+.tarjetaTrujo {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #ccccff;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial, Helvetica, sans-serif";
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 2px dotted #6666cc; }
+  .tarjetaTrujo:hover {
+    transform: scale(1.05); }
+
+/*# sourceMappingURL=main.css.map */

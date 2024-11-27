@@ -1,0 +1,7 @@
+@import '../variables';
+@import '../mixins';
+
+.tarjetaJohn {
+  @include tarjetaBase(#ccffcc, #000);
+  border: 2px dashed #66cc66;
+}
